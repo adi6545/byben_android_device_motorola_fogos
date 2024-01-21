@@ -216,6 +216,10 @@ TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
 TARGET_RECOVERY_DENSITY := hdpi
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 
+SOONG_CONFIG_NAMESPACES += ufsbsg
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
+
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
