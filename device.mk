@@ -315,7 +315,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     bt \
     display \
-    perf
+    perf \
+    wfd
 
 # RFS MSM MPSS symlinks
 PRODUCT_PACKAGES += \
