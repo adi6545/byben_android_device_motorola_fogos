@@ -314,7 +314,8 @@ PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     bt \
-    display
+    display \
+    perf
 
 # RFS MSM MPSS symlinks
 PRODUCT_PACKAGES += \
