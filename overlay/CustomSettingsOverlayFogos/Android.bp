@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageSettingsOverlayFogos",
-    system_ext_specific: true,
+    name: "CustomSettingsOverlayFogos",
+    product_specific: true,
 }

@@ -238,12 +238,11 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayFogos \
+    CustomSettingsOverlayFogos \
     FrameworkOverlayFogos \
     FrameworkOverlayFogosXT23638 \
     FrameworkOverlayFogosXT23639 \
     FrameworksProductOverlayFogos \
-    LineageSDKOverlayFogos \
-    LineageSettingsOverlayFogos \
     SettingsOverlayFogos \
     SettingsProviderOverlayFogos \
     SystemUIOverlayFogos \
