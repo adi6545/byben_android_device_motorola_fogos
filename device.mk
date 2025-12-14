@@ -242,6 +242,7 @@ PRODUCT_PACKAGES += \
     FrameworkOverlayFogosXT23638 \
     FrameworkOverlayFogosXT23639 \
     FrameworksProductOverlayFogos \
+    Launcher3DeviceOverlayFogos \
     LineageSDKOverlayFogos \
     LineageSettingsOverlayFogos \
     SettingsOverlayFogos \
