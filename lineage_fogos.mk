@@ -26,3 +26,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="fogos_g-user 15 V1UGS35H.75-14-3-7 2d75a-10fe5 release-keys MV-186" \
     BuildFingerprint=motorola/fogos_g/fogos:15/V1UGS35H.75-14-3-7/2d75a-10fe5:user/release-keys \
     DeviceProduct=fogos_g
+
+# Axion Stuff
+TARGET_ENABLE_BLUR := true
+AXION_CAMERA_REAR_INFO := 50,2
+AXION_CAMERA_FRONT_INFO := 16
+AXION_MAINTAINER := Byben
+AXION_PROCESSOR := Snapdragon_6s_Gen_3
