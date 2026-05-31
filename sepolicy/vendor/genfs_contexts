@@ -1,0 +1,4 @@
+# sched nodes
+genfscon proc /sys/kernel/sched_boost u:object_r:proc_sched:s0
+genfscon proc /sys/kernel/sched_downmigrate u:object_r:proc_sched:s0
+genfscon proc /sys/kernel/sched_upmigrate u:object_r:proc_sched:s0
