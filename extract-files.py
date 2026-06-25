@@ -63,6 +63,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    'vendor/lib64/libmot_chi_desktop_helper.so': blob_fixup()
+        .add_needed('libgui_buffer_shim_vendor.so'),
     ('vendor/bin/init.kernel.post_boot-blair.sh', 'vendor/bin/init.kernel.post_boot-holi.sh'): blob_fixup()
         .regex_replace('ro.boot.using_zram_from_fstab', 'ro.vendor.zram.swapon'),
     (
