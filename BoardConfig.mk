@@ -76,13 +76,16 @@ ODM_MANIFEST_D_FILES := $(DEVICE_PATH)/configs/sku/manifest_d.xml
 ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/configs/sku/manifest_dn.xml
 ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/configs/sku/manifest_n.xml
 
-# Kernel
+# Prebuilt Kernel Config
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_SEPARATED_DTBO := true
+
 BOARD_KERNEL_CMDLINE := \
     androidboot.console=ttyMSM0 \
     androidboot.hardware=qcom \
-	androidboot.hab.product=fogos \
+    androidboot.hab.product=fogos \
     androidboot.memcg=1 \
     androidboot.usbcontroller=4e00000.dwc3 \
     cgroup.memory=nokmem,nosocket \
@@ -94,14 +97,18 @@ BOARD_KERNEL_CMDLINE := \
     pcie_ports=compat \
     service_locator.enable=1 \
     swiotlb=0
-BOARD_KERNEL_IMAGE_NAME := Image
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
+
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-BOARD_RAMDISK_USE_LZ4 := true
-TARGET_KERNEL_NO_GCC := true
-TARGET_KERNEL_SOURCE := kernel/motorola/sm6375
-TARGET_KERNEL_CONFIG := vendor/holi-qgki_defconfig vendor/ext_config/lineage_moto-holi.config vendor/ext_config/moto-holi-fogos.config
+
+# Point to prebuilt kernel & DTB images
+TARGET_PREBUILT_KERNEL := device/motorola/fogos-kernel/kernel
+BOARD_PREBUILT_DTBOIMAGE := device/motorola/fogos-kernel/dtbo.img
+BOARD_PREBUILT_DTBIMAGE := device/motorola/fogos-kernel/dtb.img
+
+# Header files & Vendor RAMDisk Modules
+TARGET_PTABLE_USER_HEADERS := device/motorola/fogos-kernel/kernel-headers
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard device/motorola/fogos-kernel/ramdisk-modules/*.ko)
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard device/motorola/fogos-kernel/vendor-modules/*.ko)
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
