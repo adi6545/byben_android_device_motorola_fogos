@@ -44,6 +44,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     $(LOCAL_PATH)/configs/public.libraries-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
 
+# Lunaris Maintainer prop
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lunaris.maintainer=Aditya
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
