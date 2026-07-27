@@ -1,0 +1,6 @@
+<resources>
+<integer name="config_defaultRefreshRateInZone">120</integer>
+
+    <!-- System Info -->
+    <integer name="config_sysCPUTempMultiplier">1000</integer>
+</resources>
