@@ -1,4 +1,5 @@
 <resources>
+    
 <integer name="config_defaultRefreshRateInZone">120</integer>
 
     <!-- System Info -->
