@@ -249,6 +249,7 @@ PRODUCT_PACKAGES += \
     FrameworksProductOverlayFogos \
     LineageSDKOverlayFogos \
     LineageSettingsOverlayFogos \
+    SettingsResDevice \
     SettingsOverlayFogos \
     SettingsProviderOverlayFogos \
     SystemUIOverlayFogos \
@@ -347,6 +348,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
     ro.carrier
+
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
 # RFS MSM MPSS symlinks
 PRODUCT_PACKAGES += \
